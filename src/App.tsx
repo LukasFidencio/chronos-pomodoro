@@ -23,22 +23,29 @@ export function App() {
       </Container>
 
       <Container>
-        <form className='form' action="">
-          <div className="formRow">
-            <DefaultInput id='meuInput' type='text'/>
-        </div>
-
-          <div className="formRow">
-          <p>Lorem ipsum dolor sit amet.</p>
+        <form className='form' action=''>
+          <div className='formRow'>
+            <DefaultInput
+              labelText='task'
+              id='meuInput'
+              type='text'
+              placeholder='Digite aqui!'
+              disabled
+              defaultValue='valor preenchido'
+            />
           </div>
 
-           <div className="formRow">
-          <p>Ciclos</p>
-          <p>0 0 0 0 0 0</p>
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
 
-          <div className="formRow">
-          <button>Enviar</button>
+          <div className='formRow'>
+            <p>Ciclos</p>
+            <p>0 0 0 0 0 0</p>
+          </div>
+
+          <div className='formRow'>
+            <button>Enviar</button>
           </div>
         </form>
       </Container>
