@@ -1,7 +1,7 @@
-import { Container } from "../../components/Container";
-import { CountDown } from "../../components/CountDown";
-import { MainForm } from "../../components/MainForm";
-import { MainTemplate } from "../../templates/MainTamplate";
+import { Container } from '../../components/Container';
+import { CountDown } from '../../components/CountDown';
+import { MainForm } from '../../components/MainForm';
+import { MainTemplate } from '../../templates/MainTamplate';
 
 export function Home() {
   return (
@@ -9,11 +9,10 @@ export function Home() {
       <Container>
         <CountDown />
       </Container>
-      
+
       <Container>
         <MainForm />
       </Container>
     </MainTemplate>
-    );
+  );
 }
-
