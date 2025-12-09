@@ -1,7 +1,7 @@
 import { Container } from '../../components/Container';
 import { GenericHtml } from '../../components/GenericHtml';
 import { Heading } from '../../components/Heading';
-import { MainTemplate } from '../../templates/MainTamplate';
+import { MainTemplate } from '../../templates/MainTemplate';
 
 export function AboutPomodoro() {
   return (

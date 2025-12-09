@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import styles from './styles.module.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -25,7 +26,7 @@ export function Menu() {
   function handleThemeChange(
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) {
-    event.preventDefault(); // Não segue o link
+    event.preventDefault();
 
     setTheme(prevTheme => {
       const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
@@ -33,35 +34,27 @@ export function Menu() {
     });
   }
 
-  // useEffect(() => {
-  //   console.log('useEffect sem dependencia', Date.now());
-  // }); //executado toda vez que o componente renderiza
-
-  // useEffect(() => {
-  //   console.log('com array deps vazio', Date.now());
-  // }, []); // executado apenas na primeira renderização
-
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-  }, [theme]); // Executado sempre que a variável theme mudar
+  }, [theme]);
 
   return (
     <nav className={styles.menu}>
-      <a
+      <Link
         className={styles.menuLink}
-        href='#'
+        to='/'
         aria-label='Ir para a Home'
         title='Ir para a Home'
       >
         <HouseIcon />
-      </a>
+      </Link>
 
       <a
         className={styles.menuLink}
         href='#'
-        aria-label='Ver histórico'
-        title='Ver histórico'
+        aria-label='Ver Histórico'
+        title='Ver Histórico'
       >
         <HistoryIcon />
       </a>
